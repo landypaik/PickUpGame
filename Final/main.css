@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Oct 23, 2014, 5:09:00 PM
     Author     : landon
@@ -13,109 +8,116 @@ body {
             
 #container {
     background-image: url("Carbon_Fiber.png");      
-    width: 640px;
-    height: 1136px;
+    background-repeat:no-repeat;
+    background-size:contain;   
+    width: 272.85px;
+    height: 500px;
     margin: auto;
     position: relative;
 }
 
 #logo {
-    width: 200px; height: auto;
+    width: 70px; height: auto;
     position: relative;
-    top: 30px;
-    left: 215px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    top: 64px;
 }
 
 
 #text {
     font-family: "HelveticaNeue-Light";
-    font-weight: 500;
     color: white;
     position: relative;
-    padding-top: 50px;
+    padding-top: 55px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    top: 20px;
+    font-size: 10px;
 }
 
 #alert {
     font-family: "HelveticaNeue-Light";
-    font-weight: 500;
+    font-size: 15px;
     color: white;
-    font-size: 250%;
     position: absolute;
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     visibility: hidden;
-    top: 400px;
-    left: 235px;
+    top: 180px;
+    margin: auto;
+    left: 106px;
 }
 
 #icons {
     display: table;
     margin: 30px auto;   
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 #goals {
     display: table;
-    padding-top: 250px;
+    padding-top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 #basketBall {
-    width: 100px; height: 100px;
+    width: 35px; height: 35px;
     z-index: 100;
-    margin-right: 35px;
-    margin-left: 35px;
+    margin-right: 5px;
+    margin-left: 10px;
 }
 
 #soccerBall {
-        width: 100px; height: 100px;
+        width: 35px; height: 35px;
         z-index: 100;
-        margin-right: 35px;
+        margin-right: 10px;
 }
 
 #baseBall {
-        width: 100px; height: 100px;
+        width: 35px; height: 35px;
         z-index: 100;
-        margin-right: 35px;
+        margin-right: 10px;
 }
 
 #tennisBall {
-        width: 100px; height: 100px;
+        width: 35px; height: 35px;
         z-index: 100;
-        margin-right: 35px;
-}
-
-#goals {
-    
+        margin-right: 10px;
 }
 
 #basketBall_Goal { 
-    width: 500px; height: auto; padding: 0.5em; visibility: hidden;
+    width: 173px; height: auto; padding: 0.5em; visibility: hidden;
     z-index: 10; position: absolute;
-    padding-left: 60px;
-    top: 520px;
+    padding-left: 50px;
+    top: 230px;
     
 }
 
 #soccer_Goal { 
-    width: 500px; height: auto; padding: 0.5em; margin: 10px; visibility: hidden;
+    width: 173px; height: auto; padding: 0.5em; margin: 10px; visibility: hidden;
     z-index: 9; position: absolute;
-    padding-left: 60px;
-    top: 520px;
+    padding-left: 40px;
+    top: 230px;
 }
 
 #baseBall_Goal { 
-    width: 450px; height: auto; padding: 0.5em; margin: 10px; visibility: hidden;
+    width: 173px; height: auto; padding: 0.5em; margin: 10px; visibility: hidden;
     z-index: 8; position: absolute;
-    padding-left: 60px;
-    top: 450px;
+    padding-left: 40px;
+    top: 200px;
 }
 
 #tennisBall_Goal { 
-    width: 450px; height: auto; padding: 0.5em; margin: 10px; visibility: hidden;
+    width: 173px; height: auto; padding: 0.5em; margin: 10px; visibility: hidden;
     z-index: 7; position: absolute;
-    padding-left: 60px;
-    top: 450px;
+    padding-left: 40px;
+    top: 200px;
 }
 
+#basketballPage {
+    display: none;
+}

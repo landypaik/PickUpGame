@@ -1,5 +1,12 @@
 var dropping = false;
 
+$(document).ready(function() {
+  $('div').click(function(){
+       alert("Hello.....");
+      });
+
+ });
+
 $(function() {
     // function to drag items
     $( ".drag" ).draggable({ revert: true });        
@@ -11,79 +18,83 @@ $(function() {
         switch (droppedObject) {
             case "basketBall":
                 // make basketball goal larger when dropped
-                $( this ).animate({height: "auto", width: "575px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "550px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "525px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
+                $( this ).animate({height: "auto", width: "200px", left: "-15px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                $( this ).animate({height: "auto", width: "190px", left: "-10px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                $( this ).animate({height: "auto", width: "182px", left: "-5px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
                 var basketball = document.getElementById("basketBall");
                 // return basketball icon size to original size
-                basketball.style.height="100px";
-                basketball.style.width="100px";
+                basketball.style.height="35px";
+                basketball.style.width="35px";
                 // change upper text when successfully dropped
                 var loadingText = document.getElementById("text");
-                loadingText.innerHTML = "Loading Basketball!";
+                loadingText.innerHTML = "Loading Basketball";
                 // change lower text when successfully dropped
                 var alertMake = document.getElementById("alert");
-                alertMake.innerHTML = "Loading!";
+                alertMake.innerHTML = "Nice Shot";
+                alertMake.style.left = "102px";
                 break;
             case "soccerBall":
                 // make soccer goal larger when dropped
-                $( this ).animate({height: "auto", width: "575px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "550px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "525px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
+                $( this ).animate({height: "auto", width: "200px", left: "-15px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                $( this ).animate({height: "auto", width: "190px", left: "-10px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                $( this ).animate({height: "auto", width: "182px", left: "-5px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
                 var soccerball = document.getElementById("soccerBall");
                 // return basketball icon size to original size
-                soccerball.style.height="100px";
-                soccerball.style.width="100px";
+                soccerball.style.height="35px";
+                soccerball.style.width="35px";
                 // change upper text when successfully dropped
                 var loadingText = document.getElementById("text");
-                loadingText.innerHTML = "Loading Soccer!";
+                loadingText.innerHTML = "Loading Soccer";
                 // change lower text when successfully dropped
                 var alertMake = document.getElementById("alert");
-                alertMake.innerHTML = "Loading!";
+                alertMake.innerHTML = "Nice Shot";
+                alertMake.style.left = "102px";
                 break;
             case "baseBall":
                 // make baseball bat larger when dropped
-                $( this ).animate({height: "auto", width: "575px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "550px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "525px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
+                $( this ).animate({height: "auto", width: "200px", left: "-15px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                $( this ).animate({height: "auto", width: "190px", left: "-10px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                $( this ).animate({height: "auto", width: "182px", left: "-5px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
                 var baseball = document.getElementById("baseBall");
                 // return basketball icon size to original size
-                baseball.style.height="100px";
-                baseball.style.width="100px";
+                baseball.style.height="35px";
+                baseball.style.width="35px";
                 // change upper text when successfully dropped
                 var loadingText = document.getElementById("text");
-                loadingText.innerHTML = "Loading Baseball!";
+                loadingText.innerHTML = "Loading Baseball";
                 // change lower text when successfully dropped
                 var alertMake = document.getElementById("alert");
-                alertMake.innerHTML = "Loading!";
+                alertMake.innerHTML = "Nice Hit";
+                alertMake.style.left = "104px";
                 break;
             case "tennisBall":
                 // make tennis racquet larger when dropped
-                $( this ).animate({height: "auto", width: "575px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "550px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "525px", left: "-10px"});
-                $( this ).animate({height: "auto", width: "500px", left: "-10px"});
-                var tennisball = document.getElementById("soccerBall");
+                $( this ).animate({height: "auto", width: "200px", left: "-15px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                $( this ).animate({height: "auto", width: "190px", left: "-10px"});
+                $( this ).animate({height: "auto", width: "173px", left: "  0px"});
+                $( this ).animate({height: "auto", width: "182px", left: "-5px"});
+                $( this ).animate({height: "auto", width: "173px", left: "0px"});
+                var tennisball = document.getElementById("tennisBall");
                 // return basketball icon size to original size
-                tennisball.style.height="100px";
-                tennisball.style.width="100px";
+                tennisball.style.height="35px";
+                tennisball.style.width="35px";
                 // change upper text when successfully dropped
                 var loadingText = document.getElementById("text");
-                loadingText.innerHTML = "Loading Tennis!";
+                loadingText.innerHTML = "Loading Tennis";
                 // change lower text when successfully dropped
                 var alertMake = document.getElementById("alert");
-                alertMake.innerHTML = "Loading!";
+                alertMake.innerHTML = "Nice Stroke";
+                alertMake.style.left = "94px";
                 break;
         }
        },
@@ -108,8 +119,8 @@ $(document).ready(function(){
             case "basketBall":
                 // enlarge icon when grabbed
                 var basketball = document.getElementById("basketBall");
-                basketball.style.height="150px";
-                basketball.style.width="150px";
+                basketball.style.height="55px";
+                basketball.style.width="55px";
                 // make goal visible when grabbed
                 var basketballGoal = document.getElementById("basketBall_Goal");
                 setTimeout(function(){
@@ -124,7 +135,7 @@ $(document).ready(function(){
                 tennisball.style.visibility="hidden";
                 // change upper text for instruction
                 var changeText = document.getElementById("text");
-                changeText.innerHTML = "Throw the ball inside the hoop!";
+                changeText.innerHTML = "Throw the ball inside the hoop";
                 // make the goal shake when the icon is selected
                 $( document ).mousedown(function() {
                 $( "#basketBall_Goal" ).effect( "shake", {time:2, distance: 6}, 100);
@@ -133,8 +144,8 @@ $(document).ready(function(){
             case "soccerBall":
                 // enlarge icon when grabbed
                 var soccerball = document.getElementById("soccerBall");
-                soccerball.style.height="150px";
-                soccerball.style.width="150px";
+                soccerball.style.height="55px";
+                soccerball.style.width="55px";
                 // make goal visible when grabbed
                 var soccerGoal = document.getElementById("soccer_Goal");
                 setTimeout(function(){
@@ -149,7 +160,7 @@ $(document).ready(function(){
                 tennisball.style.visibility="hidden";
                 // change upper text for instruction
                 var changeText = document.getElementById("text");
-                changeText.innerHTML = "Throw the ball inside the goal!";
+                changeText.innerHTML = "Throw the ball inside the goal";
                 // make the goal shake when the icon is selected
                 $( document ).mousedown(function() {
                 $( "#soccer_Goal" ).effect( "shake", {time:2, distance: 6}, 200);
@@ -158,8 +169,8 @@ $(document).ready(function(){
             case "baseBall":
                 // enlarge icon when grabbed
                 var baseball = document.getElementById("baseBall");
-                baseball.style.height="150px";
-                baseball.style.width="150px";
+                baseball.style.height="55px";
+                baseball.style.width="55px";
                 // make goal visible when grabbed
                 var img = document.getElementById("baseBall_Goal");
                 setTimeout(function(){
@@ -174,7 +185,7 @@ $(document).ready(function(){
                 tennisball.style.visibility="hidden";
                 // change upper text for instruction
                 var changeText = document.getElementById("text");
-                changeText.innerHTML = "Throw the ball to the bat!";
+                changeText.innerHTML = "Throw the ball to the bat";
                 // make the goal shake when the icon is selected
                 $( document ).mousedown(function() {
                 $( "#baseBall_Goal" ).effect( "shake", {time:2, distance: 6}, 200);
@@ -183,8 +194,8 @@ $(document).ready(function(){
             case "tennisBall":
                 // enlarge icon when grabbed
                 var tennisball = document.getElementById("tennisBall");
-                tennisball.style.height="150px";
-                tennisball.style.width="150px";
+                tennisball.style.height="55px";
+                tennisball.style.width="55px";
                 // make goal visible when grabbed
                 var img = document.getElementById("tennisBall_Goal");
                 setTimeout(function(){
@@ -199,7 +210,7 @@ $(document).ready(function(){
                 basketball.style.visibility="hidden";
                 // change upper text for instruction
                 var changeText = document.getElementById("text");
-                changeText.innerHTML = "Throw the ball to the racquet!";
+                changeText.innerHTML = "Throw the ball to the racquet";
                 // make the goal shake when the icon is selected
                 $( document ).mousedown(function() {
                 $( "#tennisBall_Goal" ).effect( "shake", {time:2, distance: 6}, 200);
@@ -210,7 +221,7 @@ $(document).ready(function(){
         // function when user release the mouse from draggable icon
         $(".drag").mouseup(function(){
                 var changeBackText = document.getElementById("text");
-                changeBackText.innerHTML = "Click and drag the sports you want to play!";
+                changeBackText.innerHTML = "Drag the sports you want to play";
                 $(function() {
                 // make disappeared lower text to reappear
                 setTimeout(function() {
@@ -231,6 +242,7 @@ $(document).ready(function(){
                 switch (changeDraggedObject) {
                     case "basketBall":
                         if(dropping === true) {
+                            setTimeout(function(){window.open("basketball.html", "_self");}, 2000);
                         // when draggable image is dropped outside the droppable image
                         } else {
                             // hide goal when drop unsuccessful
@@ -238,8 +250,8 @@ $(document).ready(function(){
                             img.style.visibility="hidden"; 
                             // change icon size back to original when drop unsuccessful
                             var basketball = document.getElementById("basketBall");
-                            basketball.style.height="100px";
-                            basketball.style.width="100px";
+                            basketball.style.height="35px";
+                            basketball.style.width="35px";
                             // change icon visible when drop unsuccessful
                             var soccerball = document.getElementById("soccerBall");
                             soccerball.style.visibility="visible";
@@ -251,14 +263,15 @@ $(document).ready(function(){
                         break;
                     case "soccerBall":
                         if(dropping === true) {
+                            setTimeout(function(){window.open("soccer.html", "_self");}, 2000);
                         } else {
                             // hide goal when drop unsuccessful
                             var img = document.getElementById("soccer_Goal");
                             img.style.visibility="hidden";
                             // change icon size back to original when drop unsuccessful
                             var soccerball = document.getElementById("soccerBall");
-                            soccerball.style.height="100px";
-                            soccerball.style.width="100px";
+                            soccerball.style.height="35px";
+                            soccerball.style.width="35px";
                             // change icon visible when drop unsuccessful
                             var basketball = document.getElementById("basketBall");
                             basketball.style.visibility="visible";
@@ -270,14 +283,15 @@ $(document).ready(function(){
                         break;
                     case "baseBall":
                         if(dropping === true) {
+                            setTimeout(function(){window.open("baseball.html", "_self");}, 2000);
                         } else {
                             // hide goal when drop unsuccessful
                             var img = document.getElementById("baseBall_Goal");
                             img.style.visibility="hidden"; 
                             // change icon size back to original when drop unsuccessful
                             var baseball = document.getElementById("baseBall");
-                            baseball.style.height="100px";
-                            baseball.style.width="100px";
+                            baseball.style.height="35px";
+                            baseball.style.width="35px";
                             // change icon visible when drop unsuccessful
                             var soccerball = document.getElementById("soccerBall");
                             soccerball.style.visibility="visible";
@@ -289,14 +303,15 @@ $(document).ready(function(){
                         break;
                     case "tennisBall":
                         if(dropping === true) {
+                            setTimeout(function(){window.open("tennis.html", "_self");}, 2000);
                         } else {
                             // hide goal when drop unsuccessful
                             var img = document.getElementById("tennisBall_Goal");
                             img.style.visibility="hidden"; 
                             // change icon size back to original when drop unsuccessful
                             var tennisball = document.getElementById("tennisBall");
-                            tennisball.style.height="100px";
-                            tennisball.style.width="100px";
+                            tennisball.style.height="35px";
+                            tennisball.style.width="35px";
                             // change icon visible when drop unsuccessful
                             var soccerball = document.getElementById("soccerBall");
                             soccerball.style.visibility="visible";

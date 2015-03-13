@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PickUpGame - Soccer</title>
+  <link href="jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="jquery-1.11.1.js"></script>
+  <script src="jquery-ui.js"></script>
+  <style>
+      body {
+      background: white;
+      }
+
+      #container {
+      background-image: url("Map.png");      
+      background-repeat:no-repeat;
+      background-size:contain;   
+      width: 272.85px;
+      height: 500px;
+      margin: auto;
+      position: relative;
+      }
+
+      .icons {
+        margin: 30px auto;   
+        padding-top: 20px;
+        position: absolute;
+        cursor: pointer;
+      }
+
+      #bg1 {
+        position: absolute;
+        top: 100px;
+        left: 40px;
+        width: 30px;
+        height: 48px;
+      }
+
+      #bg2 {
+        position: absolute;
+        top: 150px;
+        left: 180px;
+        width: 30px;
+        height: 48px;
+      }
+
+      #by1 {
+        position: absolute;
+        top: 70px;
+        left: 140px;
+        width: 30px;
+        height: 48px;
+      }
+
+      #by2 {
+        position: absolute;
+        top: 160px;
+        left: 70px;
+        width: 30px;
+        height: 48px;
+      }
+
+      #by3 {
+        position: absolute;
+        top: 230px;
+        left: 140px;
+        width: 30px;
+        height: 48px;
+      }
+
+      #br1 {
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        width: 30px;
+        height: 48px;
+      }
+
+      #br2 {
+        position: absolute;
+        top: 220px;
+        left: 50px;
+        width: 30px;
+        height: 48px;
+      }
+
+      #Infobox {
+        background-color: #e24040;
+        width: 221.95px;
+        height: 152.12px;
+        margin: auto;
+        position: absolute;
+        left: 25.5px;
+        top: 289px;
+        opacity: .8;
+        visibility: hidden;
+        display: block;
+        text-align: center;
+      }
+
+      #reset {
+        position: absolute;
+        background-color: transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        left: 30px;
+        top: 63px;
+        font-size: 12px;
+        color: white;
+        font-family: HelveticaNeue;
+      }
+
+      #go, #invite, #info {
+        background-color: red;
+        margin-top: 121px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-top: 4px;
+        padding-bottom: 5px;
+        margin-left: 2.5px;
+        margin-right: 2px;
+        z-index: 1;
+        font-size: 11px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        opacity: .9;
+      }
+
+      .text {
+        color: white;
+        font-family: HelveticaNeue;
+      }
+
+      #explanation {
+        color: white;
+        font-family: HelveticaNeue;
+        top: 450px;
+        left: 35px;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        visibility: visible;
+        font-size: 12px;
+      }
+
+      #playerNumb_exp {
+        left: 40px;
+        top: 310px;
+        position: absolute;
+        font-size: 12px;
+        visibility: hidden;
+      }
+
+      #waitTime_exp {
+        left: 40px;
+        top: 360px;
+        position: absolute;
+        font-size: 12px;
+        visibility: hidden;
+      }
+
+      #playerNumb {
+        left: 190px;
+        top: 310px;
+        position: absolute;
+        font-size: 18px;
+      }
+
+      #waitTime {
+        left: 190px;
+        top: 360px;
+        position: absolute;
+        font-size: 18px;
+      }
+
+
+
+  </style>
+</head>
+<body>
+    <div id="container">
+        <button id="reset" onclick="returnHome()">RESET</button>
+
+        <div class="icons">
+          <img id="bg1" src="Green_Soccer.png" onclick="scaleUp1()"></img>
+          <img id="bg2" src="Green_Soccer.png" onclick="scaleUp2()"></img>
+          <img id="by1" src="Yellow_Soccer.png" onclick="scaleUp3()"></img>
+          <img id="by2" src="Yellow_Soccer.png" onclick="scaleUp4()"></img>
+          <img id="by3" src="Yellow_Soccer.png" onclick="scaleUp5()"></img>
+          <img id="br1" src="Red_Soccer.png" onclick="scaleUp6()"></img>
+          <img id="br2" src="Red_Soccer.png" onclick="scaleUp7()"></img>
+        </div>
+        
+
+        <div class="text" id="Infobox">
+            <button class="text" id="go" onclick="goExplanation()">GO</button>
+            <button class="text" id="invite" onclick="inviteExplanation()">INVITE</button>
+            <button class="text" id="info" onclick="infoExplanation()">INFO</button>
+        </div>
+        <div class="text" id="playerNumb_exp">Number of players<br />at the field</div>
+        <div class="text" id="playerNumb"></div>
+        <div class="text" id="waitTime_exp">Estimate<br />waiting time</div>
+        <div class="text" id="waitTime"></div>
+        <div id="explanation">Click on the icon to choose the field</div> 
+    </div>
+
+    
+    
+
+<script>
+      function returnHome() {
+        window.open("index.html", "_self");
+      }
+
+      function scaleUp1() {
+        document.getElementById("explanation").style.visibility= "hidden";
+        document.getElementById("playerNumb_exp").style.visibility= "visible";
+        document.getElementById("waitTime_exp").style.visibility= "visible";
+        var InfoBox = document.getElementById("Infobox");
+        InfoBox.style.visibility = "visible";
+        var playerNumber = document.getElementById("playerNumb");
+        playerNumber.innerHTML = "5";
+        var waitingTime = document.getElementById("waitTime");
+        waitingTime.innerHTML = "6m";
+      }
+
+      function scaleUp2() {
+        document.getElementById("explanation").style.visibility= "hidden";
+        document.getElementById("playerNumb_exp").style.visibility= "visible";
+        document.getElementById("waitTime_exp").style.visibility= "visible";
+        var InfoBox = document.getElementById("Infobox");
+        InfoBox.style.visibility = "visible";
+        var playerNumber = document.getElementById("playerNumb");
+        playerNumber.innerHTML = "6";
+        var waitingTime = document.getElementById("waitTime");
+        waitingTime.innerHTML = "7m";
+      }
+
+      function scaleUp3() {
+        document.getElementById("explanation").style.visibility= "hidden";
+        document.getElementById("playerNumb_exp").style.visibility= "visible";
+        document.getElementById("waitTime_exp").style.visibility= "visible";
+        var InfoBox = document.getElementById("Infobox");
+        InfoBox.style.visibility = "visible";
+        var playerNumber = document.getElementById("playerNumb");
+        playerNumber.innerHTML = "12";
+        var waitingTime = document.getElementById("waitTime");
+        waitingTime.innerHTML = "16m";
+      }
+
+      function scaleUp4() {
+        document.getElementById("explanation").style.visibility= "hidden";
+        document.getElementById("playerNumb_exp").style.visibility= "visible";
+        document.getElementById("waitTime_exp").style.visibility= "visible";
+        var InfoBox = document.getElementById("Infobox");
+        InfoBox.style.visibility = "visible";
+        var playerNumber = document.getElementById("playerNumb");
+        playerNumber.innerHTML = "14";
+        var waitingTime = document.getElementById("waitTime");
+        waitingTime.innerHTML = "15m";
+      }
+
+      function scaleUp5() {
+        document.getElementById("explanation").style.visibility= "hidden";
+        document.getElementById("playerNumb_exp").style.visibility= "visible";
+        document.getElementById("waitTime_exp").style.visibility= "visible";
+        var InfoBox = document.getElementById("Infobox");
+        InfoBox.style.visibility = "visible";
+        var playerNumber = document.getElementById("playerNumb");
+        playerNumber.innerHTML = "15";
+        var waitingTime = document.getElementById("waitTime");
+        waitingTime.innerHTML = "14m";
+      }      
+
+      function scaleUp6() {
+        document.getElementById("explanation").style.visibility= "hidden";
+        document.getElementById("playerNumb_exp").style.visibility= "visible";
+        document.getElementById("waitTime_exp").style.visibility= "visible";
+        var InfoBox = document.getElementById("Infobox");
+        InfoBox.style.visibility = "visible";
+        var playerNumber = document.getElementById("playerNumb");
+        playerNumber.innerHTML = "20";
+        var waitingTime = document.getElementById("waitTime");
+        waitingTime.innerHTML = "22m";
+      }
+
+      function scaleUp7() {
+        document.getElementById("explanation").style.visibility= "hidden";
+        document.getElementById("playerNumb_exp").style.visibility= "visible";
+        document.getElementById("waitTime_exp").style.visibility= "visible";
+        var InfoBox = document.getElementById("Infobox");
+        InfoBox.style.visibility = "visible";
+        var playerNumber = document.getElementById("playerNumb");
+        playerNumber.innerHTML = "23";
+        var waitingTime = document.getElementById("waitTime");
+        waitingTime.innerHTML = "25m";
+        console.log("yay");
+      }
+
+      function goExplanation() {
+        var Explanation = document.getElementById("explanation");
+        Explanation.style.visibility= "visible";
+        Explanation.innerHTML = "Show driving direction"
+      }
+
+      function inviteExplanation() {
+        var Explanation = document.getElementById("explanation");
+        Explanation.style.visibility= "visible";
+        Explanation.innerHTML = "Invite friends to chosen facility"
+      }
+
+      function infoExplanation() {
+        var Explanation = document.getElementById("explanation");
+        Explanation.style.visibility= "visible";
+        Explanation.innerHTML = "Show detailed information"
+      }
+</script>
+</body>
+
+</html>
